@@ -4,12 +4,12 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('Docker')
   }
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t lloydmatereke/jenkins-docker-hub .'
+        sh 'docker build -t mohaitsme/docker .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push lloydmatereke/jenkins-docker-hub'
+        sh 'docker push mohaitsme/docker'
       }
     }
   }
