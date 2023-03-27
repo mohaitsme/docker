@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('mohaitsmee')
+    DOCKERHUB_CREDENTIALS = credentials('mohaitsme')
   }
   stages {
     stage('Build') {
