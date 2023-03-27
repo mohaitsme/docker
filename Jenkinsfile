@@ -19,6 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
+        sh 'docker tag mohaitsme-img:1.01 mohaitsme/docker:1.01'
         sh 'docker push mohaitsme/docker'
       }
     }
