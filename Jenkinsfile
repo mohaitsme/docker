@@ -13,7 +13,7 @@ pipeline {
     }
 	stage('Exec') {
       steps {
-        sh 'docker container run -dt --name mani mohanitsme sh'
+        sh 'docker container run -dt --name jenkinsdemo mohanitsme sh'
       }
     }
   }
