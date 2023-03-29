@@ -1,11 +1,11 @@
 pipeline {
   agent any
-  stages {
-    stages {
+      stages {
     stage('Docker') {
       steps {
         sh 'Docker --version'
       }
+    }
     stage('Build') {
       steps {
         sh 'docker build -t mohanitsme .'
