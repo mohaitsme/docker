@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-	stages {
 	stage('Docker') {
       		steps {
         		sh 'Docker --version'
@@ -17,6 +16,5 @@ pipeline {
         sh 'docker container run -dt --name mani mohanitsme sh'
       }
     }
-  }
   }
 }
