@@ -3,9 +3,10 @@ pipeline {
   stages {
 	stages {
 	stage('Docker') {
-      steps {
-        sh 'Docker --version'
+      		steps {
+        		sh 'Docker --version'
       }
+	}
     stage('Build') {
       steps {
         sh 'docker build -t mohanitsme .'
@@ -16,5 +17,6 @@ pipeline {
         sh 'docker container run -dt --name mani mohanitsme sh'
       }
     }
+  }
   }
 }
